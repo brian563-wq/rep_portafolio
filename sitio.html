@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="C:\bootstrap\css\bootstrap.css">    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <style>
+body{
+     background: url(C:\patio.jpg) no-repeat center fixed;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+    background-size: cover;
+}
+
+#calculadora{
+             width: 300px;
+             height: 900px;
+             position: relative;
+             text-align: center;
+             left: 1200px;
+             background: url(C:\madera.jpg);
+             top: 50px;
+             border: solid 2px black;
+}
+#form1{
+       position: relative;
+       text-align: center;
+       transform: scale(1.1,1.1);
+       top: 80px;
+}
+#tabl{
+      position: relative;
+      top: -600px;
+      right: 1130px;
+      width: 1050px;
+}
+.MR{
+     position: relative;
+     text-align: center;
+     top: 20px;
+}
+#medidas{
+         position: relative;
+         text-align: center;
+         top: 180px;
+         width: 250px;
+         transform: scale(1.1,1.1);
+}
+#btnpresu{
+          text-align: center;
+          position: relative;
+          top: 35px;
+          border-radius: 4px;
+}
+#inp{
+     position: center;
+     top: 10px;
+     position: relative;
+}
+
+    </style>
+    <title>Brian</title>
+</head>  
+    <body>
+        <script src="sitio.js"></script>
+        <div id="calculadora">
+           
+           <div id="div2" class="container" align-items="">
+            <input id="inp" type="number" onkeyup="keyup()">
+       
+            <form id="form1" class="container">
+             
+                <input name="pb" type="radio" class="form-check-input" value="13" onclick="pulgadas()" >13,68(3")</input><br>
+                <br>
+                <input name="pb" type="radio" class="form-check-input" value="9"  onclick="pulgadas()" >9,84(4")</input><br>
+                <br>
+                <input name="pb" type="radio" class="form-check-input" value="7"  onclick="pulgadas()" >7,84(5")</input><br>
+                <br>
+                <input name="pb" type="radio" class="form-check-input" value="5"  onclick="pulgadas()" c>5,56(6")</input><br>
+                
+                
+           </form>
+               
+           <div id="medidas" class="container">
+        <form id="form2">
+        <input id="m2_45" type="radio"  name="medi"  onclick="medidas()" value="2.45M">2.45M</input>
+        <input id="m2_75" type="radio"  name="medi"  onclick="medidas()">2.75M</input>
+        <input id="m3_"   type="radio"  name="medi"  onclick="medidas()">3M</input>
+        <input id="m3_30" type="radio"  name="medi"  onclick="medidas()">3.30M</input>
+        <br>
+        <br>
+        <input id="m3_60" type="radio" name="medi"  onclick="medidas()">3.60M</input>
+        <input id="m4_" type="radio" name="medi"  onclick="medidas()">4M</input>
+        <input id="m4_20" type="radio" name="medi"  onclick="medidas()">4.20M</input>
+        <input id="m4_50" type="radio" name="medi"  onclick="medidas()">4.50M</input>
+        
+        <br>
+        <br>
+        <input type="radio" name="medi" class="M450"  onclick="medidas()">Especificar</input>
+
+        <br>
+        <br>
+        <input type="text" id="MR" onkeyup="keyup2()">
+        </form>
+        <form id="madera">
+         <br>
+         <input id="salina" type="radio" name="maderas">SALINA</input>
+         <br>
+         <br>
+         <input id="pino" type="radio" name="maderas">PINO</input>
+         <br>
+         <br>
+         <input id="imp" type="radio" name="maderas">IMPREGNADO</input>
+         <br>
+
+        </form>
+        <br>
+        <input id="precio" type="number" onkeyup="cond()">
+        <br>
+        <input type="button" id="btnpresu" value="CALCULAR" onclick="calcular()" class="btn btn-secondary btn-block"></input>
+
+        </div>
+        </div>
+        
+            <table id="tabl" class="table table-primary ">
+         <tr id="tr">
+           <td class="col-4"  id=tds><strong>CANTIDAD</strong></td>
+           <td class="xs" id=tds><strong>DESCRIPCION</strong></td>
+           <td class="xs" id=tds><strong>MEDIDAS</strong></td>
+           <td class="xs" id=tds><strong>LONGITUD</strong></td>
+           <td class="xs" id=tds><strong>P.U</strong></td>
+           <td class="xs" id=tds><strong>P.T</strong></td>
+           <td id="fecha"><strong>FECHA</strong></td>
+           <td><strong>BORRAR</strong></td> 
+         
+        </tr>
+       
+
+
+
+
+            </table>
+        
+    </div>
+
+    </body>
+    
+
+   
